@@ -7,7 +7,7 @@ const View = () => {
     const[description,setdescription]=useState('');
 
     const handlecreate=async(t,a,d)=>{
-      axios.post('http://localhost:4000/book',{"title":t,"author":a,"description":d})
+      axios.post('https://mern-booksky-backend.onrender.com',{"title":t,"author":a,"description":d})
       .then(console.log("created"));
       setbox(false)
       settitle('')

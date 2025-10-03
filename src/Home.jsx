@@ -6,7 +6,7 @@ const Home = () => {
 
     const fetchBooks = async () => {
         try {
-            const res = await axios.get('http://localhost:4000/book');
+            const res = await axios.get('https://mern-booksky-backend.onrender.com');
             setget(res.data);
         } catch (err) {
             console.log(err);
@@ -19,7 +19,7 @@ const Home = () => {
 
     const handledelete = async (id) => {
         try {
-            await axios.delete(`http://localhost:4000/book/${id}`);
+            await axios.delete(`https://mern-booksky-backend.onrender.com/${id}`);
             setget(get.filter(f => f._id !== id)); // use f.id if using 'id' instead
         } catch (err) {
             console.log(err);
